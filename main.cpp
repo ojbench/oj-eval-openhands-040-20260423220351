@@ -177,42 +177,4 @@ public:
     }
 };
 
-// Main function for testing (can be removed for OJ submission)
-int main() {
-    // Basic test
-    DoublyLinkedList<int> list;
-    
-    // Test push_front and push_back
-    list.push_front(10);
-    list.push_back(20);
-    list.push_front(5);
-    list.push_back(30);
-    
-    std::cout << "List size: " << list.size() << std::endl;
-    
-    // Test iterator
-    std::cout << "List elements: ";
-    for (auto it = list.begin(); it != list.end(); ++it) {
-        std::cout << *it << " ";
-    }
-    std::cout << std::endl;
-    
-    // Test pop_front and pop_back
-    while (!list.empty()) {
-        auto front_val = list.pop_front();
-        if (front_val) {
-            std::cout << "Popped front: " << *front_val << std::endl;
-        }
-        
-        if (!list.empty()) {
-            auto back_val = list.pop_back();
-            if (back_val) {
-                std::cout << "Popped back: " << *back_val << std::endl;
-            }
-        }
-    }
-    
-    std::cout << "Final list size: " << list.size() << std::endl;
-    
-    return 0;
-}
+
